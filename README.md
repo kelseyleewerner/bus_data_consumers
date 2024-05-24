@@ -1,3 +1,5 @@
+Please Note: This repo only contains the consumers for this pipeline. The producers can be found [here](https://github.com/kelseyleewerner/bus_data_producers).
+
 # Guide to Files and Directories in this Repo
 
 **TEST**
