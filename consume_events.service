@@ -1,0 +1,14 @@
+[Unit]
+Description = Kafka Stop Event Consumer daemon
+After network.target = auditd.service
+
+[Service]
+Type = forking
+ExecStart = /home/werner/bin/consume_events.sh start
+ExecStop = /home/werner/bin/consume_events.sh stop
+ExecReload = /home/werner/bin/consume_events.sh reload
+User = werner
+Group = werner
+
+[Install]
+WantedBy = multi-user.target

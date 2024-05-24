@@ -1,0 +1,14 @@
+[Unit]
+Description = Kafka Breadcrumb Consumer daemon
+After network.target = auditd.service
+
+[Service]
+Type = forking
+ExecStart = /home/werner/bin/consume_data.sh start
+ExecStop = /home/werner/bin/consume_data.sh stop
+ExecReload = /home/werner/bin/consume_data.sh reload
+User = werner
+Group = werner
+
+[Install]
+WantedBy = multi-user.target 
